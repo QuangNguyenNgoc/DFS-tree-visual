@@ -38,8 +38,9 @@ An interactive web application for visualizing AVL (Adelson-Velsky and Landis) t
 
 ### Prerequisites
 
-- Node.js 16+
+- Node.js 18+
 - npm or yarn
+- Git (for deployment)
 
 ### Installation
 
@@ -62,13 +63,64 @@ npm install
 npm run dev
 ```
 
-4. Open your browser and navigate to `http://localhost:5173`
+4. Open your browser and navigate to `http://localhost:3000`
 
 ### Building for Production
 
 ```bash
 npm run build
 ```
+
+## Deployment to GitHub Pages
+
+### Automatic Deployment (Recommended)
+
+1. Push your code to the `main` branch
+2. GitHub Actions will automatically build and deploy your app
+3. Your app will be available at: `https://yourusername.github.io/DFS-tree-visual/`
+
+### Manual Deployment
+
+1. Install dependencies:
+
+```bash
+npm install
+```
+
+2. Build the project:
+
+```bash
+npm run build
+```
+
+3. Deploy to GitHub Pages:
+
+```bash
+npm run deploy
+```
+
+### Windows Users
+
+Use the provided batch file:
+
+```bash
+deploy.bat
+```
+
+### Linux/Mac Users
+
+Use the provided shell script:
+
+```bash
+chmod +x deploy.sh
+./deploy.sh
+```
+
+### Important Notes
+
+- Make sure to update the `base` path in `vite.config.ts` to match your repository name
+- Ensure GitHub Pages is enabled in your repository settings
+- The deployment will create a `gh-pages` branch automatically
 
 ## Usage
 
